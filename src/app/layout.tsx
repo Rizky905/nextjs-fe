@@ -3,6 +3,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/layout/header";
 import HeaderMobile from "@/components/layout/header-mobile";
+import Sidebar from "@/components/layout/sidebar";
+import MainPage from "@/components/layout/main-page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +22,17 @@ export default function RootLayout({
     <html lang="en">
       <ThemeRegistry>
         <body className={inter.className}>
-          <Header />
-          <HeaderMobile />
+          <div className="flex">
+            <Sidebar />
+            <main className="flex-1">
+              <div className="flex flex-col md:ml-60 sm:border-r sm:border-zinc-700 min-h-screen">
+                <Header />
+                <HeaderMobile />
 
-          {children}
+                <MainPage>{children}</MainPage>
+              </div>
+            </main>
+          </div>
         </body>
       </ThemeRegistry>
     </html>

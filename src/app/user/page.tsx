@@ -1,4 +1,4 @@
 const page = () => {
-  return <div>Dashboard</div>;
+  return <div>All user</div>;
 };
 export default page;
