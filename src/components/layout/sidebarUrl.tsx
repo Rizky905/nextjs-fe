@@ -15,12 +15,12 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
   {
-    title: "User",
-    path: "/user",
-    icon: <Icon icon="lucide:folder" width="24" height="24" />,
+    title: "Customer",
+    path: "/customer",
+    icon: <Icon icon="lucide:user" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      { title: "All", path: "/user" },
+      { title: "All", path: "/customer" },
       // { title: 'User', path: '/projects/web-design' },
       // { title: 'Graphic Design', path: '/projects/graphic-design' },
     ],
